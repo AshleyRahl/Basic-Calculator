@@ -21,4 +21,8 @@ else:
     print(f"Invalid operator: '{operator}'")
     print("Use one of +, -, *, /")
 
-print(f"Result: {result}")
+num_decimal = int(input("Round my result to given decimals: "))
+if num_decimal == 0:
+    print(round(result))
+else:
+    print(round(result, num_decimal))
