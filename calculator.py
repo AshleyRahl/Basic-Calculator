@@ -3,15 +3,22 @@ num1 = float(input("Enter the first number: "))
 # Get user input for the second number
 num2 = float(input("Enter the second number: "))
 
-# Get user input for the operation
-operation = input("Enter the operation (+, -, *, /): ")
+# Get user input for the operator
+operator = input("Enter the operator (+, -, *, /): ")
 
-# Testing the inputs
-print(num1)
-print(num2)
-print(operation)
+result = 0
 
-# Testing input type
-print(type(num1))
-print(type(num2))
-print(type(operation))
+# Perform the calculation based on the operator
+if operator == "+":
+    result = num1 + num2
+elif operator == "-":
+    result =num1 - num2
+elif operator == "*":
+    result =num1 * num2
+elif operator == "/":
+    result =num1 / num2
+else:
+    print(f"Invalid operator: '{operator}'")
+    print("Use one of +, -, *, /")
+
+print(f"Result: {result}")
